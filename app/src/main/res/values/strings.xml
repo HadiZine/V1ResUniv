@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">ResUniv</string>
+    <string name="txt_bienvenu">Bienvenue</string>
+    <string name="immage_logo">immage_logo</string>
+    <string name="choizisez_votre_profil"><u>Choisissez votre profil SVP</u></string>
+    <string name="photo_profil_etuduant">photo_profil_etuduant</string>
+    <string name="photo_profil_staff">photo_profil_staff</string>
+    <string name="logo_sans_cack">logo_sans_cack</string>
+    <string name="staff"><u>Staff</u></string>
+    <string name="etudiant"><u>Etudiant</u></string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="valider_butt">Valider</string>
+    <string name="se_connecter"><u>Se connecter</u></string>
+    <string name="rester_connect">Rester connecté</string>
+    <string name="connexion_button">Connexion</string>
+    <string name="creer_un_compte">Inscrivez Vous</string>
+    <string name="ou">----------------Ou----------------</string>
+    <string name="android_version_v1_0">Android Version v1.0</string>
+    <string name="identifiant">Identifiant</string>
+    <string name="s_inscrir">Inscription</string>
+    <string name="choisissez_votre_password">choisissez votre password</string>
+    <string name="your_adresse_email">Your adresse Email</string>
+    <string name="nom">Nom</string>
+    <string name="pr_nom">Prénom</string>
+    <string name="votre_id_d_h_bergement">Votre Id d\'hébergement</string>
+    <string name="valider">Valider</string>
+</resources>

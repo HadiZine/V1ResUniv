@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "940850939426",
+    "project_id": "restouniv-514b0",
+    "storage_bucket": "restouniv-514b0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:940850939426:android:b28a4df28a7f32452e2c7b",
+        "android_client_info": {
+          "package_name": "com.example.resuniv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "940850939426-loigv60i1letrjc6dhaqkjqousqpfqjk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.resuniv",
+            "certificate_hash": "b6346437663fa5370907842f7d3504026d0719aa"
+          }
+        },
+        {
+          "client_id": "940850939426-s2b60t7oga43rn7o6qfjaqis4m6lf131.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD87vvcXFD-jZJMiX_oS_nkDrfzZdDBlxc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "940850939426-s2b60t7oga43rn7o6qfjaqis4m6lf131.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
