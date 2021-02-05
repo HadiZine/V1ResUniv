@@ -97,7 +97,7 @@
         android:layout_height="40dp"
         android:layout_gravity="start"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="48dp"
         android:background="@drawable/arrondir"
         android:enabled="true"
@@ -105,10 +105,10 @@
         app:backgroundTint="#FF5722"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintHorizontal_bias="0.568"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password_Staff"
-        app:layout_constraintVertical_bias="0.118" />
+        app:layout_constraintVertical_bias="0.005" />
 
     <CheckBox
         android:id="@+id/checkBox_staff"
@@ -121,5 +121,38 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password_Staff"
         app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/text_inscrir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginBottom="136dp"
+        android:text="@string/text_inscrir"
+        android:textColor="#5E130D"
+        android:textSize="15sp"
+        android:textStyle="normal|bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Connexion_button_staff"
+        app:layout_constraintVertical_bias="0.206" />
+
+    <TextView
+        android:id="@+id/clique_inscrir_staff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="136dp"
+        android:text="@string/clique_inscrir"
+        android:textColor="#FF5722"
+        android:textSize="16sp"
+        android:textStyle="normal|bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toEndOf="@+id/text_inscrir"
+        app:layout_constraintTop_toBottomOf="@+id/Connexion_button_staff"
+        app:layout_constraintVertical_bias="0.206" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

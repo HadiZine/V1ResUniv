@@ -5,29 +5,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity_creer_compte"
+    tools:context=".activity_creer_compte_staff"
 
     android:background="@drawable/capturefond" >
 
     <EditText
-        android:id="@+id/user_Mdp_etudiant"
+        android:id="@+id/user_Mdp_staff"
         android:layout_width="362dp"
         android:layout_height="41dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="388dp"
         android:layout_marginEnd="24dp"
+        android:autofillHints=""
         android:hint="@string/choisissez_votre_password"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/button_valider_insciption_etudiant"
+        android:selectAllOnFocus="true"
+        app:layout_constraintBottom_toTopOf="@+id/button_valider_insciption_staff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.06"
-        android:autofillHints="" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/user_mail_etudiant"
+        android:id="@+id/user_mail_staff"
         android:layout_width="362dp"
         android:layout_height="43dp"
         android:layout_marginStart="24dp"
@@ -35,7 +36,8 @@
         android:layout_marginEnd="24dp"
         android:hint="@string/your_adresse_email"
         android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@+id/user_Mdp_etudiant"
+        android:selectAllOnFocus="true"
+        app:layout_constraintBottom_toTopOf="@+id/user_Mdp_staff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -75,59 +77,63 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/nom_etudiant"
+        android:id="@+id/nom_staff"
         android:layout_width="360dp"
         android:layout_height="40dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="184dp"
         android:layout_marginEnd="24dp"
+        android:layout_marginBottom="4dp"
         android:hint="@string/nom"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/Prenom_etudiant"
+        app:layout_constraintBottom_toTopOf="@+id/Prenom_staff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:autofillHints="" />
 
     <EditText
-        android:id="@+id/Prenom_etudiant"
+        android:id="@+id/Prenom_staff"
         android:layout_width="361dp"
         android:layout_height="45dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="228dp"
         android:layout_marginEnd="24dp"
+        android:autofillHints=""
         android:hint="@string/pr_nom"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/user_ID"
+        app:layout_constraintBottom_toTopOf="@+id/nom_staff"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/user_ID"
+        android:id="@+id/user_ID_staff"
         android:layout_width="366dp"
         android:layout_height="43dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="280dp"
         android:layout_marginEnd="24dp"
-        android:hint="@string/votre_id_d_h_bergement"
+        android:hint="@string/CIN"
         android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/user_mail_etudiant"
+        app:layout_constraintBottom_toTopOf="@+id/user_mail_staff"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:autofillHints="" />
 
     <Button
-        android:id="@+id/button_valider_insciption_etudiant"
+        android:id="@+id/button_valider_insciption_staff"
         android:layout_width="140dp"
         android:layout_height="40dp"
         android:layout_gravity="start"
         android:layout_marginStart="48dp"
         android:layout_marginTop="66dp"
         android:layout_marginEnd="48dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="84dp"
         android:background="@drawable/arrondir"
         android:enabled="true"
         android:text="@string/valider"
@@ -136,7 +142,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/user_Mdp_etudiant"
+        app:layout_constraintTop_toTopOf="@+id/user_Mdp_staff"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
@@ -170,7 +176,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.838"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_valider_insciption_etudiant"
+        app:layout_constraintTop_toBottomOf="@+id/button_valider_insciption_staff"
         app:layout_constraintVertical_bias="0.794" />
 
     <!--

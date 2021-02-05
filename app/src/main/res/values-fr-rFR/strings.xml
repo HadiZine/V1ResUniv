@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">ResUniv</string>
     <string name="txt_bienvenu">Bienvenue</string>
@@ -18,27 +19,27 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="valider_butt">Valider</string>
-    <string name="se_connecter"><u>S\'identifier</u></string>
+    <string name="se_connecter"><u>Se connecter</u></string>
     <string name="rester_connect">Rester connecté</string>
     <string name="connexion_button">Connexion</string>
-    <string name="creer_un_compte">S\'inscrire</string>
+    <string name="creer_un_compte">Inscrivez Vous</string>
     <string name="ou">----------------Ou----------------</string>
     <string name="android_version_v1_0">Android Version v1.0</string>
     <string name="identifiant">Identifiant</string>
-    <string name="s_inscrir"><u>S\'inscrire</u></string>
-    <string name="choisissez_votre_password">Password</string>
-    <string name="your_adresse_email">Email</string>
+    <string name="s_inscrir"><u>Inscription</u></string>
+    <string name="choisissez_votre_password">choisissez votre password</string>
+    <string name="your_adresse_email">Your adresse Email</string>
     <string name="nom">Nom</string>
     <string name="pr_nom">Prénom</string>
-    <string name="votre_id_d_h_bergement">ID d\'hébergement</string>
+    <string name="votre_id_d_h_bergement">Votre Id d\'hébergement</string>
     <string name="valider">Valider</string>
-    <string name="descriptionCGU">En cliquant sur valider, vous acceptez les conditions génerales d\'utilisations</string>
+
     <string name="telechargerCGU">
         <a href="https://firebasestorage.googleapis.com/v0/b/restouniv-514b0.appspot.com/o/CGU.pdf?alt=media&amp;token=0794e394-5675-410b-8fd3-24ba083fd7e1">Télecharger CGU</a>
     </string>
-    <string name="text_inscrir">Vous n\'avez pas encore de compte? </string>
+
+    <string name="text_inscrir">Vous n\'avez pas encore de compte? S\'nscrire</string>
+    <string name="descriptionCGU">En cliquant sur valider, vous acceptez les conditions génerales d\'utilisations</string>
     <string name="clique_inscrir"><u>S\'inscrire</u></string>
     <string name="CIN">CIN N°  </string>
-
-
 </resources>
