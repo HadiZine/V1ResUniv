@@ -39,6 +39,14 @@
     <string name="text_inscrir">Vous n\'avez pas encore de compte? </string>
     <string name="clique_inscrir"><u>S\'inscrire</u></string>
     <string name="CIN">CIN N°  </string>
-
+    <string name="bienvenue_mr" translatable="false"><u>Bienvenue Mr</u></string>
+    <string name="r_servation_personnalis_e" translatable="false"><b><u>   Réservation personnalisée :</u></b> Sélectionnez les dates et les repas voulus</string>
+    <string name="r_servation_complete" translatable="false"><b><u>   Réservation Complete :</u></b> 7 jours compris le déjeuner et le diner </string>
+    <string name="nom_prenom" translatable="false"><u>Nom Prenom</u></string>
+    <string name="mot_de_passe_oubli" translatable="false"><u>Mot de passe oublié ?</u></string>
+    <string name="saisir_une_adresse_e_mail_pour_recevoir_un_lien_de_r_nitialisation_de_votre_mot_de_passe" translatable="false">Saisir Une adresse e-mail pour recevoir un lien de rénitialisation de votre Mot de passe:</string>
+    <string name="TextReservCompl" translatable="false"><u>Voulez-vous confirmer la réservation complete de 7 jours validés dans la calendrier ci-dessous</u></string>
+    <string name="Vos_reservation" translatable="false"><u>Vos réservations</u></string>
+    <string name="TextReservationPersonn" translatable="false"><u>Sélectionnez les dates puis les repas voulus</u></string>
 
 </resources>

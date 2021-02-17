@@ -9,7 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ResUniv">
-        <activity android:name=".activity_creer_compte_staff"></activity>
+        <activity android:name=".ActivityMethodePaiement"></activity>
+        <activity android:name=".ActivityPaiementPersonnalise" />
+        <activity android:name=".ActivityPaiementComplet" />
+        <activity android:name=".ActivityResetPasseword" />
+        <activity android:name=".ActivityReservationComplete" />
+        <activity android:name=".ActivityReservationPersonnalise" />
+        <activity android:name=".ChoixTypeReservation" />
+        <activity android:name=".activity_creer_compte_staff" />
         <activity android:name=".activity_creer_compte" />
         <activity android:name=".Activity_login_etudiant" />
         <activity android:name=".Activity_login_staff" />

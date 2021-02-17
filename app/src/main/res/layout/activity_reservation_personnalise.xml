@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/capturefond"
+    tools:context=".ActivityReservationPersonnalise">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="249dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/logo_sans_cack"
+        app:layout_constraintBottom_toTopOf="@+id/tx_profil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.202"
+        app:srcCompat="@drawable/logo_sans_back" />
+
+    <CalendarView
+        android:id="@+id/calendarViewPerso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="#D7F6F0F0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textReservationCompl" />
+
+    <TextView
+        android:id="@+id/textReservationCompl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/TextReservationPersonn"
+        android:textColor="#5E130D"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/button_ContinuerPerson"
+        android:layout_width="192dp"
+        android:layout_height="37dp"
+        android:layout_gravity="start"
+        android:layout_marginTop="18sp"
+        android:background="@drawable/arrondir"
+        android:text="Continuer"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:backgroundTint="#FF5722"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calendarViewPerso"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:id="@+id/Ly"
+        android:layout_width="219dp"
+        android:layout_height="141dp"
+        android:layout_marginBottom="64dp"
+        android:background="#F7F6F4F4"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.462">
+
+
+        <TextView
+            android:id="@+id/date_reservation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="date_reservation"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <CheckBox
+            android:id="@+id/checkBox_dej"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Déjeuner"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <CheckBox
+            android:id="@+id/checkBox_dinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dinner"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/ok_repas"
+            android:layout_width="46dp"
+            android:layout_height="34dp"
+            android:text="OK"
+            android:textSize="8sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
