@@ -32,6 +32,7 @@ public class ActivityPaiementPersonnalise extends AppCompatActivity {
 
     private final float prix_repas = (float) 1.5;
     private TextView Prix_reservation_Personnaliset;
+    public static String PrixApayer;
     private static int cmpt_repas;
 
     public static ListView Lv_Personnalise;
@@ -91,6 +92,7 @@ public class ActivityPaiementPersonnalise extends AppCompatActivity {
                        }
 
                 Prix_reservation_Personnaliset.setText("Prix Total: "+String.valueOf(cmpt_repas*prix_repas)+" DH");
+                PrixApayer = Prix_reservation_Personnaliset.getText().toString();
             }
 
 
@@ -125,7 +127,7 @@ public class ActivityPaiementPersonnalise extends AppCompatActivity {
         Paiement_butt_personnalise.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentGo_PaimentP = new Intent(ActivityPaiementPersonnalise.this, ActivityMethodePaiement.class);
+                Intent intentGo_PaimentP = new Intent(ActivityPaiementPersonnalise.this, PaiementActivity.class);
                 startActivity(intentGo_PaimentP);
             }
         });

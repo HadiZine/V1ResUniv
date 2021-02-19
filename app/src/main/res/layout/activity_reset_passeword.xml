@@ -30,7 +30,7 @@
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
         android:gravity="center"
-        android:text="@string/saisir_une_adresse_e_mail_pour_recevoir_un_lien_de_r_nitialisation_de_votre_mot_de_passe"
+        android:text="Saisir votre adresse e-mail pour reçevoir un lien de réinitialisation de votre mot de passe"
         android:textColor="#5E130D"
         android:textSize="15sp"
         android:textStyle="normal|bold"

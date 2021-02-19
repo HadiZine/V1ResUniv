@@ -91,7 +91,7 @@ public class Activity_login_etudiant extends AppCompatActivity {
                         return;
                     }
                     if(Password.isEmpty()){
-                        YourPassword.setError("S'il vous plait entrez voter Email");
+                        YourPassword.setError("S'il vous plait entrez voter mot de passe");
                         YourPassword.requestFocus();
                         return;
                     }
@@ -99,15 +99,16 @@ public class Activity_login_etudiant extends AppCompatActivity {
 
                 else{
 
-                    progressBar_reg_etud.setVisibility(View.VISIBLE);
-                    textBar_reg_etud.setVisibility(View.VISIBLE);
+
 
                     MyAuth.signInWithEmailAndPassword(Email, Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
+                                progressBar_reg_etud.setVisibility(View.VISIBLE);
+                                textBar_reg_etud.setVisibility(View.VISIBLE);
                                 Toast.makeText(getApplicationContext(),"Log in succefully",Toast.LENGTH_LONG).show();
-                                Intent intent = new Intent(Activity_login_etudiant.this, ChoixTypeReservation.class);
+                                Intent intent = new Intent(Activity_login_etudiant.this, ActivityMenu.class);
                                 startActivity(intent);
                             }
                             else

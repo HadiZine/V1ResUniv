@@ -37,6 +37,15 @@ public class ActivityReservationComplete extends AppCompatActivity {
         Cv.setMinDate(date1);
         Cv.setMaxDate(date2);
 
+
+
+
+
+
+
+
+
+
         Button_ConfirmerComplet= findViewById(R.id.button_ConfirmerComplet);
         Button_ConfirmerComplet.setOnClickListener(new View.OnClickListener() {
             @Override

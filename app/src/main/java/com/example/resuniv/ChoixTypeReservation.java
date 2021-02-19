@@ -30,6 +30,8 @@ public class ChoixTypeReservation extends AppCompatActivity {
 
     private    static  final  String LOG_TAG ="RestauUniv";
 
+
+
     private CheckBox ch_Complet, ch_person;
     private Button button_ChoixType;
 

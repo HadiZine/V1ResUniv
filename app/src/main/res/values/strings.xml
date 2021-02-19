@@ -18,35 +18,102 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="valider_butt">Valider</string>
-    <string name="se_connecter"><u>S\'identifier</u></string>
+    <string name="se_connecter"><u>Se connecter</u></string>
     <string name="rester_connect">Rester connecté</string>
     <string name="connexion_button">Connexion</string>
-    <string name="creer_un_compte">S\'inscrire</string>
+    <string name="creer_un_compte">Créer un Compte</string>
     <string name="ou">----------------Ou----------------</string>
     <string name="android_version_v1_0">Android Version v1.0</string>
-    <string name="identifiant">Identifiant</string>
-    <string name="s_inscrir"><u>S\'inscrire</u></string>
-    <string name="choisissez_votre_password">Password</string>
-    <string name="your_adresse_email">Email</string>
-    <string name="nom">Nom</string>
-    <string name="pr_nom">Prénom</string>
-    <string name="votre_id_d_h_bergement">ID d\'hébergement</string>
-    <string name="valider">Valider</string>
-    <string name="descriptionCGU">En cliquant sur valider, vous acceptez les conditions génerales d\'utilisations</string>
+    <string name="Identifiant" translatable="false">ID</string>
+    <string name="Identifiant_staff" translatable="false">Indentifiant_staff</string>
+    <string name="Id_staff" translatable="false">Identifiant_staff</string>
+    <string name="s_inscrir">S\'inscrir</string>
+    <string name="sinscrir" translatable="false">S \'inscrir</string>
+    <string name="Valider_button" translatable="false">Valider</string>
+    <string name="Nom" translatable="false">Nom</string>
+    <string name="Pénom" translatable="false">Prénom</string>
+    <string name="Id_Hébergement" translatable="false">N°de carte d\'hébergement</string>
+    <string name="IdHébergement" translatable="false">N°de la carte d hébergement</string>
+    <string name="Adresse_mail" translatable="false">Adresse Email</string>
+    <string name="mot_de_passe" translatable="false">Mot de passe</string>
+    <string name="dejeunner" translatable="false">Dejeunner :</string>
+    <string name="d_crivez_votre_r_clamation" translatable="false">Décrivez votre réclamation...</string>
+
     <string name="telechargerCGU">
         <a href="https://firebasestorage.googleapis.com/v0/b/restouniv-514b0.appspot.com/o/CGU.pdf?alt=media&amp;token=0794e394-5675-410b-8fd3-24ba083fd7e1">Télecharger CGU</a>
     </string>
-    <string name="text_inscrir">Vous n\'avez pas encore de compte? </string>
-    <string name="clique_inscrir"><u>S\'inscrire</u></string>
-    <string name="CIN">CIN N°  </string>
-    <string name="bienvenue_mr" translatable="false"><u>Bienvenue Mr</u></string>
-    <string name="r_servation_personnalis_e" translatable="false"><b><u>   Réservation personnalisée :</u></b> Sélectionnez les dates et les repas voulus</string>
-    <string name="r_servation_complete" translatable="false"><b><u>   Réservation Complete :</u></b> 7 jours compris le déjeuner et le diner </string>
-    <string name="nom_prenom" translatable="false"><u>Nom Prenom</u></string>
-    <string name="mot_de_passe_oubli" translatable="false"><u>Mot de passe oublié ?</u></string>
-    <string name="saisir_une_adresse_e_mail_pour_recevoir_un_lien_de_r_nitialisation_de_votre_mot_de_passe" translatable="false">Saisir Une adresse e-mail pour recevoir un lien de rénitialisation de votre Mot de passe:</string>
-    <string name="TextReservCompl" translatable="false"><u>Voulez-vous confirmer la réservation complete de 7 jours validés dans la calendrier ci-dessous</u></string>
-    <string name="Vos_reservation" translatable="false"><u>Vos réservations</u></string>
-    <string name="TextReservationPersonn" translatable="false"><u>Sélectionnez les dates puis les repas voulus</u></string>
 
+
+    <string-array name="plat">
+        <item>Dinde</item>
+        <item>Viande</item>
+        <item>Poisson</item>
+    </string-array>
+
+    <string-array name="boissons">
+        <item>Yagourt</item>
+        <item>Jus d_orande</item>
+        <item>Jus d_avocat</item>
+    </string-array>
+
+    <string-array name="dessert">
+        <item>Bannan</item>
+        <item>Pomme</item>
+        <item>Orange</item>
+    </string-array>
+
+    <string-array name="dej_din">
+        <item>Dejeunner</item>
+        <item>Dinner</item>
+
+    </string-array>
+
+    <string-array name="Anomalies">
+        <item>Hygiéne</item>
+        <item>Qualité de service</item>
+        <item>Comportement du personnel</item>
+    </string-array>
+
+    <string-array name="MM">
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+
+    <string-array name="YY">
+        <item>2015</item>
+        <item>2016</item>
+        <item>2017</item>
+        <item>2018</item>
+        <item>2019</item>
+        <item>2020</item>
+        <item>2021</item>
+        <item>2022</item>
+        <item>2023</item>
+        <item>2024</item>
+        <item>2025</item>
+        <item>2026</item>
+        <item>2027</item>
+        <item>2028</item>
+        <item>2029</item>
+        <item>2030</item>
+        <item>2031</item>
+
+    </string-array>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="choisissez_le_type_de_repas">Choisissez le type de repas :</string>
+    <string name="yy">yy</string>
+    <string name="mm">mm</string>
 </resources>

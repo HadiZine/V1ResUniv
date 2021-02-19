@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+
+        <item
+            android:id="@+id/Les_reservations"
+            android:icon="@drawable/ic_baseline_check_24"
+            android:title="Mes réservations" />
+        <item
+            android:id="@+id/menu_repas"
+            android:icon="@drawable/ic_restaurant_menu"
+            android:title="Menus" />
+        <item
+            android:id="@+id/rec_test"
+            android:icon="@drawable/ic_reclamer"
+            android:title="Réclamations" />
+        <item
+            android:id="@+id/Apropos"
+            android:icon="@drawable/ic_baseline_info"
+            android:title="A propos " />
+
+        <item
+            android:id="@+id/QR"
+            android:icon="@drawable/ic_qr"
+            android:title="Génerer QR" />
+        <item
+            android:id="@+id/Log_out"
+            android:icon="@drawable/ic_baseline_logout_24"
+            android:title="Déconnexion" />
+
+
+    </group>
+</menu>

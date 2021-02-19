@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PaiementActivity" android:background="@drawable/capturefond">
+
+    <TextView
+        android:id="@+id/paiement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:text="Paiement"
+        android:textColor="#5E130D"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paiement"
+        app:srcCompat="@drawable/carte_banc_remov" />
+
+    <EditText
+        android:id="@+id/code_paiement"
+        android:layout_width="138dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="250dp"
+        android:layout_marginRight="250dp"
+        android:background="#BFFFFFFF"
+        android:drawableLeft="@drawable/ic_baseline_vpn_key_24"
+        android:gravity="center"
+        android:hint="CVV"
+        android:inputType="number"
+        android:selectAllOnFocus="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date_expiratio" />
+
+    <EditText
+        android:id="@+id/N_carte"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/ic_baseline_credit_card_24"
+        android:gravity="center"
+        android:hint="Numero de la carte "
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <TextView
+        android:id="@+id/date_expiratio"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="16dp"
+        android:autofillHints=""
+
+        android:textSize="11sp"
+        android:drawableLeft="@drawable/ic_baseline_date_range_24"
+        android:gravity="center"
+        android:hint="Date d'expiration MM/YYY : "
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/N_carte" />
+
+    <Spinner
+        android:id="@+id/MM"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:background="#BFFFFFFF"
+        android:layout_marginTop="16dp"
+        android:entries="@array/MM"
+        android:prompt="@string/mm"
+        app:layout_constraintStart_toEndOf="@+id/date_expiratio"
+        app:layout_constraintTop_toBottomOf="@+id/N_carte" />
+
+    <Spinner
+        android:id="@+id/YY"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="16dp"
+        android:background="#BFFFFFFF"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:entries="@array/YY"
+        android:prompt="@string/yy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/MM"
+        app:layout_constraintTop_toBottomOf="@+id/N_carte" />
+
+
+    <Button
+        android:id="@+id/validerPaim"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_gravity="start"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/arrondir"
+        android:enabled="true"
+        android:hint="Payer maintenat : DHS "
+        android:gravity="center"
+        app:backgroundTint="#FF5722"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/code_paiement"
+        app:layout_constraintVertical_bias="0.175" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

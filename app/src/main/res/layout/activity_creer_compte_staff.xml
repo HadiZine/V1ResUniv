@@ -10,14 +10,14 @@
     android:background="@drawable/capturefond" >
 
     <EditText
-        android:id="@+id/user_Mdp_staff"
+        android:id="@+id/staff_Mdp"
         android:layout_width="362dp"
         android:layout_height="41dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="388dp"
         android:layout_marginEnd="24dp"
         android:autofillHints=""
-        android:hint="@string/choisissez_votre_password"
+        android:hint="Choisissez votre password"
         android:inputType="textPassword"
         android:selectAllOnFocus="true"
         app:layout_constraintBottom_toTopOf="@+id/button_valider_insciption_staff"
@@ -28,16 +28,16 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/user_mail_staff"
+        android:id="@+id/staff_mail"
         android:layout_width="362dp"
         android:layout_height="43dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="332dp"
         android:layout_marginEnd="24dp"
-        android:hint="@string/your_adresse_email"
+        android:hint="Saisir votre adresse email"
         android:inputType="textEmailAddress"
         android:selectAllOnFocus="true"
-        app:layout_constraintBottom_toTopOf="@+id/user_Mdp_staff"
+        app:layout_constraintBottom_toTopOf="@+id/staff_Mdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -77,32 +77,32 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/nom_staff"
+        android:id="@+id/nstaff_name"
         android:layout_width="360dp"
         android:layout_height="40dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="184dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="4dp"
-        android:hint="@string/nom"
+        android:hint="Nom"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/Prenom_staff"
+        app:layout_constraintBottom_toTopOf="@+id/Pstaff_Prenom"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:autofillHints="" />
 
     <EditText
-        android:id="@+id/Prenom_staff"
+        android:id="@+id/Pstaff_Prenom"
         android:layout_width="361dp"
         android:layout_height="45dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="228dp"
         android:layout_marginEnd="24dp"
         android:autofillHints=""
-        android:hint="@string/pr_nom"
+        android:hint="Prénom"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/nom_staff"
+        app:layout_constraintBottom_toTopOf="@+id/nstaff_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -110,15 +110,15 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/user_ID_staff"
+        android:id="@+id/staff_Cin"
         android:layout_width="366dp"
         android:layout_height="43dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="280dp"
         android:layout_marginEnd="24dp"
-        android:hint="@string/CIN"
+        android:hint=" Votre CIN"
         android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/user_mail_staff"
+        app:layout_constraintBottom_toTopOf="@+id/staff_mail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
@@ -136,13 +136,14 @@
         android:layout_marginBottom="84dp"
         android:background="@drawable/arrondir"
         android:enabled="true"
-        android:text="@string/valider"
+        android:text="Valider"
+        android:onClick="buttAjouterStaff"
         app:backgroundTint="#FF5722"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/user_Mdp_staff"
+        app:layout_constraintTop_toTopOf="@+id/staff_Mdp"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
@@ -152,7 +153,6 @@
         android:layout_marginTop="2dp"
         android:layout_marginBottom="8dp"
         android:text="@string/telechargerCGU"
-
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -168,7 +168,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
-        android:text="@string/descriptionCGU"
+        android:text="En cliquant sur valider vous acceptez les conditions générales d'utilisation"
         android:textColor="#5E130D"
         android:textSize="12sp"
         android:textStyle="bold"
@@ -179,17 +179,36 @@
         app:layout_constraintTop_toBottomOf="@+id/button_valider_insciption_staff"
         app:layout_constraintVertical_bias="0.794" />
 
-    <!--
-   <ProgressBar
-       android:id="@+id/loading"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:layout_gravity="center"
-       android:layout_marginTop="64dp"
-       android:layout_marginBottom="64dp"
-       android:visibility="gone"
-       app:layout_constraintBottom_toBottomOf="parent"
-       app:layout_constraintTop_toTopOf="parent"
-       app:layout_constraintVertical_bias="0.3" />
-    -->
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="#EBF4EFEF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ProgressBar
+            android:id="@+id/progressBar_staff"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="212dp"
+            android:layout_height="89dp"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:indeterminateDuration="5000"/>
+
+        <TextView
+            android:id="@+id/textBar_reg_staff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loading..."
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:indeterminateDuration="5000"/>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

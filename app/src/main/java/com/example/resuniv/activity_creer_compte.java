@@ -86,12 +86,8 @@ public class activity_creer_compte extends AppCompatActivity {
         if (email.isEmpty() || mdp.isEmpty() || idHeb.isEmpty() || Nom.isEmpty() || pr.isEmpty())
         {
 
-            if(email.isEmpty()){
-                Email.setError("S'il vous plait entrez voter Email");
-                Email.requestFocus();
-                return;
-            }
-            else if(Nom.isEmpty())
+
+            if(Nom.isEmpty())
             {
                 Name.setError("S'il vous plait entrez voter nom");
                 Name.requestFocus();
@@ -109,6 +105,11 @@ public class activity_creer_compte extends AppCompatActivity {
                 idHebergement.requestFocus();
                 return;
             }
+           else if(email.isEmpty()){
+            Email.setError("S'il vous plait entrez voter Email");
+            Email.requestFocus();
+            return;
+        }
             else if(mdp.isEmpty())
             {
                 Password.setError("S'il vous entrez voter mot de passe");
