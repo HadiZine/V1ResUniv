@@ -13,6 +13,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -21,6 +22,7 @@ import java.util.Set;
 public class ActivityConsultationMenu extends AppCompatActivity {
     public ListView menusList;
     public static String[] menus = new String[] {"","","","","","",""};
+    public static ArrayList<String> arrayList = new ArrayList<>();
 
     FirebaseFirestore db;
 
@@ -29,7 +31,9 @@ public class ActivityConsultationMenu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_consultation_menu);
+
         menusList = findViewById(R.id.listmenus);
+        arrayList.clear();
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         db.collection("MENUS").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
@@ -37,9 +41,16 @@ public class ActivityConsultationMenu extends AppCompatActivity {
             {
                 if (task.isSuccessful()) {
                     for (QueryDocumentSnapshot documentSnapshot : task.getResult()) {
-                        long indice = documentSnapshot.getLong(ActivityRemplisaageMenu.getOrdre_reservation());
-                        int indic_int = ((int) indice);
-                        String str = "";
+                        // long indice = documentSnapshot.getLong(ActivityRemplisaageMenu.getOrdre_reservation());
+                        //int indic_int = ((int) indice);
+                        arrayList.add("Le : "+documentSnapshot.getId() + "\n    Dejeunner :\n       - Plat Principale : "
+                                + documentSnapshot.getString(ActivityRemplisaageMenu.dej_plat)+"\n       - Dessert : "
+                                + documentSnapshot.getString(ActivityRemplisaageMenu.dej_dessert)+"\n       - Boissons : "
+                                + documentSnapshot.getString(ActivityRemplisaageMenu.dej_boisson)+"\n   Dinner :\n       - Plat Principale : "
+                                + documentSnapshot.getString(ActivityRemplisaageMenu.din_plat)+"\n       - Dessert : "
+                                + documentSnapshot.getString(ActivityRemplisaageMenu.din_dessert)+"\n       - Boissons : "
+                                + documentSnapshot.getString(ActivityRemplisaageMenu.din_boisson));
+                    /*    String str = "";
                         Map<Integer, Object> list = new HashMap<>();
                         list.put(0, "*" + ActivityRemplisaageMenu.mtext + "");
                         list.put(1, documentSnapshot.getId() + "\n");
@@ -67,7 +78,9 @@ public class ActivityConsultationMenu extends AppCompatActivity {
 
                         menus[indic_int] = str;
 
-                        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(ActivityConsultationMenu.this, android.R.layout.simple_list_item_1, menus);
+                     */
+
+                        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(ActivityConsultationMenu.this, android.R.layout.simple_list_item_1, arrayList);
                         menusList.setAdapter(adapter);
                     }
                 }

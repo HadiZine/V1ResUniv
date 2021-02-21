@@ -140,7 +140,7 @@ public class ActivitySuiviReservation extends AppCompatActivity {
 
                     List<String> list = new ArrayList<>();
                     for (QueryDocumentSnapshot document : task.getResult()) {
-                        Toast.makeText(getApplicationContext(),"  voila  "+document.getId() ,Toast.LENGTH_LONG).show();
+                        //Toast.makeText(getApplicationContext(),"  voila  "+document.getId() ,Toast.LENGTH_LONG).show();
 
                         list.add(document.getId());
                     }
@@ -149,7 +149,7 @@ public class ActivitySuiviReservation extends AppCompatActivity {
                             @Override
                             public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException error) {
                                 if(documentSnapshot.exists()){
-                                    Toast.makeText(getApplicationContext(),"  voila dkheeelt  ",Toast.LENGTH_LONG).show();
+                                    //Toast.makeText(getApplicationContext(),"  voila dkheeelt  ",Toast.LENGTH_LONG).show();
 
                                     String var1= documentSnapshot.getString(ActivityReservationPersonnalise.Dej);
                                     String var2= documentSnapshot.getString(ActivityReservationPersonnalise.Dinner);
@@ -159,12 +159,12 @@ public class ActivitySuiviReservation extends AppCompatActivity {
                                     if(var1.equals("Déjeuner")) {
 
                                         nbrRepasDej++;
-                                        Toast.makeText(getApplicationContext(),""+var1+""+nbrRepasDej,Toast.LENGTH_LONG).show();
+                                        //Toast.makeText(getApplicationContext(),""+var1+""+nbrRepasDej,Toast.LENGTH_LONG).show();
                                         nbrDéjeuner.setText("  "+String.valueOf(nbrRepasDej)+" Repas. ");
                                     }
                                     if(var2.equals("Diner")) {
                                         nbrRepasdiner++;
-                                        Toast.makeText(getApplicationContext(),""+var2+""+nbrRepasdiner,Toast.LENGTH_LONG).show();
+                                        //Toast.makeText(getApplicationContext(),""+var2+""+nbrRepasdiner,Toast.LENGTH_LONG).show();
                                         nbrDinner.setText("  "+String.valueOf(nbrRepasdiner)+" Repas. ");
                                     }
 

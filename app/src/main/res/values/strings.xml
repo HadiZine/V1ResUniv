@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ResUniv</string>
+    <string name="app_name">RestoUniv</string>
     <string name="txt_bienvenu">Bienvenue</string>
     <string name="immage_logo">immage_logo</string>
     <string name="choizisez_votre_profil"><u>Choisissez votre profil SVP</u></string>
@@ -23,12 +23,12 @@
     <string name="connexion_button">Connexion</string>
     <string name="creer_un_compte">Créer un Compte</string>
     <string name="ou">----------------Ou----------------</string>
-    <string name="android_version_v1_0">Android Version v1.0</string>
+    <string name="android_version_v1_0"><u>Android Version v1.0</u></string>
     <string name="Identifiant" translatable="false">ID</string>
     <string name="Identifiant_staff" translatable="false">Indentifiant_staff</string>
     <string name="Id_staff" translatable="false">Identifiant_staff</string>
-    <string name="s_inscrir">S\'inscrir</string>
-    <string name="sinscrir" translatable="false">S \'inscrir</string>
+    <string name="s_inscrir"><u>S\'inscrir</u></string>
+    <string name="sinscrir" translatable="false"><u>S \'inscrir</u></string>
     <string name="Valider_button" translatable="false">Valider</string>
     <string name="Nom" translatable="false">Nom</string>
     <string name="Pénom" translatable="false">Prénom</string>
@@ -52,8 +52,8 @@
 
     <string-array name="boissons">
         <item>Yagourt</item>
-        <item>Jus d_orande</item>
-        <item>Jus d_avocat</item>
+        <item>Jus d\'orange</item>
+        <item>Jus d\'avocat</item>
     </string-array>
 
     <string-array name="dessert">
@@ -112,8 +112,28 @@
 
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="choisissez_le_type_de_repas">Choisissez le type de repas :</string>
-    <string name="yy">yy</string>
-    <string name="mm">mm</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="choisissez_le_type_de_repas" translatable="false">Choisissez le type de repas :</string>
+    <string name="yy" translatable="false">yy</string>
+    <string name="mm" translatable="false">mm</string>
+
+    <string name="RestoUniv_est_une_compagnie_de_restauration_marocaine_cr_e_en_2021_sp_cialis_e_dans_le_domaine_de_la_restauration_universitaire_au_niveau_de_l_universit_sultan_moulay_slimane_de_la_r_gion_nb_ni_mellal_kh_nifra" translatable="false">RestoUniv V1.0 est une application de restauration marocaine fondée en 2021 specialisée dans le domaine de la restauration universitaire au niveau de l\'universitée Sultan Moulay Slimane dans la région de Béni-Mellal Khénifra</string>
+    <string name="title_activity_menu_staff" translatable="false">ActivityMenuStaff</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="nav_header_title" translatable="false">Android Studio</string>
+    <string name="nav_header_subtitle" translatable="false">android.studio@android.com</string>
+    <string name="nav_header_desc" translatable="false">Navigation header</string>
+    <string name="action_settings" translatable="false">Settings</string>
+
+    <string name="menu_home" translatable="false">Home</string>
+    <string name="menu_gallery" translatable="false">Gallery</string>
+    <string name="menu_slideshow" translatable="false">Slideshow</string>
+    <string name="title_activity_drawer_staff" translatable="false">DrawerStaffActivity</string>
+    <string name="bienvenue_mr" translatable="false"><u>Bienvenue Mr</u></string>
+    <string name="nom_et_prenom" translatable="false">Nom et Prenom</string>
+    <string name="r_servation_compl_te_7_jours_compris_le_d_jeuner_et_le_diner" translatable="false"><u>Réservation complète</u>: 7 jours compris le déjeuner et le diner.</string>
+    <string name="r_servation_personnalis_e_s_lectionnez_les_dates_et_les_repas_voulus" translatable="false"><u>Réservation personnalisée</u>: sélectionnez les dates et les repas voulus.</string>
+    <string name="bonjour_monsieur" translatable="false"><u>Bonjour Monsieur</u></string>
+    <string name="nom_prenom" translatable="false">Nom prenom</string>
 </resources>

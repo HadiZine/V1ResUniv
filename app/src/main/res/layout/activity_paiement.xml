@@ -48,7 +48,7 @@
         android:layout_marginEnd="250dp"
         android:layout_marginRight="250dp"
         android:background="#BFFFFFFF"
-        android:drawableLeft="@drawable/ic_baseline_vpn_key_24"
+        android:drawableLeft="@drawable/ic_baseline_verified_user_24"
         android:gravity="center"
         android:hint="CVV"
         android:inputType="number"
@@ -81,13 +81,12 @@
         android:layout_marginStart="28dp"
         android:layout_marginLeft="28dp"
         android:layout_marginTop="16dp"
-        android:autofillHints=""
-
-        android:textSize="11sp"
+        android:textSize="13sp"
         android:drawableLeft="@drawable/ic_baseline_date_range_24"
         android:gravity="center"
-        android:hint="Date d'expiration MM/YYY : "
-        android:inputType="number"
+        android:textStyle="bold"
+        android:text="Date d'expiration MM/YYY : "
+        android:textColor="#9E000000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/N_carte" />
 
@@ -143,5 +142,38 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/code_paiement"
         app:layout_constraintVertical_bias="0.175" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="#EBF4EFEF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ProgressBar
+            android:id="@+id/progressBar_reg_etud"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="212dp"
+            android:layout_height="89dp"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:indeterminateDuration="5000"/>
+
+        <TextView
+            android:id="@+id/textBar_reg_etud"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loading..."
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:indeterminateDuration="5000"/>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

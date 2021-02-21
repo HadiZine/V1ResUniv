@@ -129,6 +129,7 @@ public class ActivityPaiementPersonnalise extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intentGo_PaimentP = new Intent(ActivityPaiementPersonnalise.this, PaiementActivity.class);
                 startActivity(intentGo_PaimentP);
+                finish();
             }
         });
 

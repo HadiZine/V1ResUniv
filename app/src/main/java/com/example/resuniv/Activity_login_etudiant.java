@@ -110,9 +110,12 @@ public class Activity_login_etudiant extends AppCompatActivity {
                                 Toast.makeText(getApplicationContext(),"Log in succefully",Toast.LENGTH_LONG).show();
                                 Intent intent = new Intent(Activity_login_etudiant.this, ActivityMenu.class);
                                 startActivity(intent);
+
                             }
                             else
                             {
+                                progressBar_reg_etud.setVisibility(View.GONE);
+                                textBar_reg_etud.setVisibility(View.GONE);
                                 Toast.makeText(getApplicationContext(),task.getException().toString(),Toast.LENGTH_LONG).show();
 
                             }

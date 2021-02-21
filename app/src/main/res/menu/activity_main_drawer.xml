@@ -8,7 +8,7 @@
 
         <item
             android:id="@+id/Les_reservations"
-            android:icon="@drawable/ic_baseline_check_24"
+            android:icon="@drawable/ic_gris_menu_book_24"
             android:title="Mes réservations" />
         <item
             android:id="@+id/menu_repas"
@@ -34,4 +34,6 @@
 
 
     </group>
+
+
 </menu>

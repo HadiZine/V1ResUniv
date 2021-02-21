@@ -37,8 +37,8 @@ public class ActivityRemplisaageMenu extends AppCompatActivity {
     private Button btn_enregistrer ;
 
 
-    public static  String Ordre_reservation = "ordre: ";
-    private long i= 0;
+    //public static  String Ordre_reservation = "ordre: ";
+   // private long i= 0;
 
     public static String mtext  ;
     private Button btn_consultation;
@@ -112,8 +112,20 @@ public class ActivityRemplisaageMenu extends AppCompatActivity {
         btn_enregistrer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                remplissage_map(mtext);
-                Toast.makeText(getApplicationContext(), "Le Menus pour la date : " + mtext + " a été bien enregistrer", Toast.LENGTH_LONG).show();
+
+                String txtTest = text.getText().toString();
+                if(txtTest.isEmpty()){
+                    text.setError("S'il vous plait sélectionnez une date");
+                    text.requestFocus();
+                    return;
+                }
+                else {
+                    remplissage_map(mtext);
+                    Toast.makeText(getApplicationContext(), "Le Menus pour la date : " + mtext + " a été bien enregistrer", Toast.LENGTH_LONG).show();
+
+                }
+
+
             }
         });
 
@@ -124,6 +136,7 @@ public class ActivityRemplisaageMenu extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(ActivityRemplisaageMenu.this , ActivityConsultationMenu.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -158,8 +171,8 @@ public class ActivityRemplisaageMenu extends AppCompatActivity {
         DataBase.put(din_plat,din_plat1 );
         DataBase.put(din_dessert ,din_dessert1 );
         DataBase.put(din_boisson ,din_boisson1 );
-        DataBase.put(Ordre_reservation, i);
-        i=i+1;
+       // DataBase.put(Ordre_reservation, i);
+       // i=i+1;
         db.collection("MENUS").document(date).set(DataBase).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
@@ -259,12 +272,5 @@ public class ActivityRemplisaageMenu extends AppCompatActivity {
         ActivityRemplisaageMenu.mtext = mtext;
     }
 
-    public static String getOrdre_reservation() {
-        return Ordre_reservation;
-    }
-
-    public static void setOrdre_reservation(String ordre_reservation) {
-        Ordre_reservation = ordre_reservation;
-    }
 
 }

@@ -1,46 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.resuniv">
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.resuniv" >
 
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_iconrestouniv_round"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_iconrestouniv_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ResUniv">
-        <activity android:name=".ActivityAccueil"></activity>
-        <activity android:name=".ActivityReclamationsEtudiant" />
-        <activity android:name=".ActivityConsultationMenu" />
-        <activity android:name=".ActivityQR" />
-        <activity android:name=".ActivitySuiviReservation" />
-        <activity android:name=".ActivityConsultationReclamation" />
-        <activity android:name=".ActivityRemplisaageMenu" />
-        <activity android:name=".ActivityProfilStaff" />
-        <activity android:name=".PaiementActivity" />
+        android:theme="@style/Theme.ResUniv" >
+
+
+        <activity android:name=".ActivityApropos"
+            android:label="A propos"
+            android:parentActivityName=".ActivityMenu"/>
+        <activity
+            android:name=".ActivityGenerationQR"
+            android:label="Code QR"
+            android:parentActivityName=".ActivityMenu"/>
+        <activity
+            android:name=".ActivityReservations"
+            android:label="Mes réservations"
+            android:parentActivityName=".ActivityMenu" />
+        <activity
+            android:name=".MainActivity"
+            android:label="Bienvenue" />
+        <activity
+            android:name=".ActivityReclamationsEtudiant"
+            android:label="Réclamation"
+            android:parentActivityName=".ActivityMenu" />
+        <activity
+            android:name=".ActivityConsultationMenu"
+            android:label="Menu"
+            android:parentActivityName=".ActivityProfilStaff" />
+        <activity
+            android:name=".ActivityQR"
+            android:label=" QR "
+            android:parentActivityName=".ActivityMenu" />
+        <activity
+            android:name=".ActivitySuiviReservation"
+            android:label="Réservations"
+            android:parentActivityName=".ActivityProfilStaff" />
+        <activity
+            android:name=".ActivityConsultationReclamation"
+            android:label="Réclamations"
+            android:parentActivityName=".ActivityProfilStaff" />
+        <activity
+            android:name=".ActivityRemplisaageMenu"
+            android:label="Préparation Menu"
+            android:parentActivityName=".ActivityProfilStaff" />
+        <activity
+            android:name=".ActivityProfilStaff"
+            android:label=" Profil " />
+        <activity
+            android:name=".PaiementActivity"
+            android:label="Paiement"
+            android:parentActivityName=".ActivityMenu" />
         <activity
             android:name=".ActivityMenu"
             android:label="ActivityMenu"
             android:theme="@style/Theme.ResUniv.NoActionBar" />
-        <activity android:name=".ActivityMethodePaiement" />
-        <activity android:name=".ActivityPaiementPersonnalise" />
-        <activity android:name=".ActivityPaiementComplet" />
-        <activity android:name=".ActivityResetPasseword" />
-        <activity android:name=".ActivityReservationComplete" />
-        <activity android:name=".ActivityReservationPersonnalise" />
-        <activity android:name=".ChoixTypeReservation" />
-        <activity android:name=".activity_creer_compte_staff" />
-        <activity android:name=".activity_creer_compte" />
-        <activity android:name=".Activity_login_etudiant" />
-        <activity android:name=".Activity_login_staff" />
-        <activity android:name=".Activity2choixProfil" />
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".ActivityPaiementPersonnalise"
+            android:label="Panier" />
+        <activity
+            android:name=".ActivityPaiementComplet"
+            android:label="Panier" />
+        <activity
+            android:name=".ActivityResetPasseword"
+            android:label="Mot de passe" />
+        <activity
+            android:name=".ActivityReservationComplete"
+            android:label="Réservation Complete" />
+        <activity
+            android:name=".ActivityReservationPersonnalise"
+            android:label="Réservation Perssonalisée" />
+        <activity
+            android:name=".ChoixTypeReservation"
+            android:label="Home" />
+        <activity
+            android:name=".activity_creer_compte_staff"
+            android:label="Inscription" />
+        <activity
+            android:name=".activity_creer_compte"
+            android:label="Inscription" />
+        <activity
+            android:name=".Activity_login_etudiant"
+            android:label="Connexion" />
+        <activity
+            android:name=".Activity_login_staff"
+            android:label="Connexion" />
+        <activity
+            android:name=".Activity2choixProfil"
+            android:label="RestoUniv" />
+        <activity
+            android:name=".ActivityAccueil"
+            android:label="RestoUniv" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -49,6 +111,7 @@
         </activity>
         <activity
             android:name=".CaptureAct"
+            android:label="Scanner"
             android:screenOrientation="fullSensor"
             android:stateNotNeeded="true"
             android:windowSoftInputMode="stateAlwaysHidden" />

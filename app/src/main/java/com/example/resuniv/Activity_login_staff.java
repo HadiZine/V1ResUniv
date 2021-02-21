@@ -98,6 +98,7 @@ public class Activity_login_staff extends AppCompatActivity {
                                 Toast.makeText(getApplicationContext(),"Log in succefully",Toast.LENGTH_LONG).show();
                                 Intent intent = new Intent(Activity_login_staff.this, ActivityProfilStaff.class);
                                 startActivity(intent);
+                                finish();
                             }
                             else
                             {

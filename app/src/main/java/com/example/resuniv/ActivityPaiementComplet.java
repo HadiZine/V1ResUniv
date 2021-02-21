@@ -91,7 +91,7 @@ public class ActivityPaiementComplet extends AppCompatActivity {
 
                 Intent intentGo_PaimentC = new Intent(ActivityPaiementComplet.this, PaiementActivity.class);
                 startActivity(intentGo_PaimentC);
-
+                finish();
             }
         });
 

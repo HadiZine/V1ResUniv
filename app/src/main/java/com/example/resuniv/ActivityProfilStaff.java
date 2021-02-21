@@ -1,10 +1,13 @@
 package com.example.resuniv;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -112,5 +115,25 @@ public class ActivityProfilStaff extends AppCompatActivity {
         });
 
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.activity_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        if(R.id.action_deconnexion==item.getItemId()){
+
+            FirebaseAuth.getInstance().signOut();
+            Intent Intent_deconnexion = new Intent(this,Activity_login_staff.class);
+            startActivity(Intent_deconnexion);
+
+        }
+        return true;
     }
 }

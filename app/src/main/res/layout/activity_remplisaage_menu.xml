@@ -34,6 +34,8 @@
         android:layout_marginRight="24dp"
         android:gravity="center"
         android:hint="selectionez une date"
+        android:selectAllOnFocus="true"
+        android:autofillHints=""
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.266"
@@ -172,7 +174,7 @@
 
     <Spinner
         android:id="@+id/din_dessert_spinner"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="24dp"
         android:layout_marginTop="16dp"
         android:entries="@array/dessert"

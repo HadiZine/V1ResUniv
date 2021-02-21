@@ -9,15 +9,17 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="61dp"
-        android:theme="@style/Theme.ResUniv.AppBarOverlay">
+        android:theme="@style/Theme.ResUniv.AppBarOverlay"
+        app:layout_anchor="@+id/toolbar"
+        app:layout_anchorGravity="center">
 
         <ImageView
             android:id="@+id/NvToolbar"
-            android:layout_width="35dp"
+            android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/ic_menu_24"
+            android:layout_gravity="center_horizontal|fill_horizontal|top|left|end"
 
-            />
+            android:src="@drawable/ic_menu_24" />
 
 
     </com.google.android.material.appbar.AppBarLayout>

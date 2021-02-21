@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityApropos"
+    android:background="@drawable/capturefond">
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="261dp"
+        android:gravity="center"
+        android:text="@string/RestoUniv_est_une_compagnie_de_restauration_marocaine_cr_e_en_2021_sp_cialis_e_dans_le_domaine_de_la_restauration_universitaire_au_niveau_de_l_universit_sultan_moulay_slimane_de_la_r_gion_nb_ni_mellal_kh_nifra"
+        android:textColor="#5E130D"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="46dp"
+        android:layout_marginLeft="46dp"
+        android:layout_marginTop="36dp"
+        app:srcCompat="@drawable/logo_sans_back" />
+
+
+
+</RelativeLayout>

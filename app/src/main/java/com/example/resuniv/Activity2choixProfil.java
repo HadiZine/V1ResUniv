@@ -3,6 +3,7 @@ package com.example.resuniv;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,7 +17,21 @@ public class Activity2choixProfil extends AppCompatActivity {
     private TextView textProfil2;
     private ImageView imageProfil2;
     private Button buttValider;
-    private int indice_choix_profil = 0;
+    private int indice_choix_profil=0;
+
+    public static SharedPreferences shP;
+    public static final String user_type="Profil";
+    public static int indiceProfil;
+
+
+    public static int getIndiceProfil() {
+        return indiceProfil;
+    }
+
+    public static void setIndiceProfil(int indiceProfil) {
+        Activity2choixProfil.indiceProfil = indiceProfil;
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +43,11 @@ public class Activity2choixProfil extends AppCompatActivity {
         imageProfil2 = (ImageView) findViewById(R.id.imageView10);
         textProfil2 = (TextView) findViewById(R.id.textView2);
         textProfil1 = (TextView) findViewById(R.id.textView1);
+
+
+        shP = getSharedPreferences("typeProfil",MODE_PRIVATE);
+
+        indiceProfil = shP.getInt(user_type, 0);
 
 
 
@@ -45,6 +65,7 @@ public class Activity2choixProfil extends AppCompatActivity {
                     //imageProfil1.setEnabled(view.isEnabled());
                     //imageProfil2.setVisibility(view.INVISIBLE);
                     //imageProfil2.setSelected(false);
+                    shP.edit().putInt(user_type,1).apply();
 
                     //textProfil2.setVisibility(view.INVISIBLE);
                     //textProfil2.animate().alpha((float) 0.40);
@@ -76,6 +97,7 @@ public class Activity2choixProfil extends AppCompatActivity {
 
                 //imageProfil2.setEnabled(view.isEnabled());
                 //imageProfil1.setSelected(false);
+                shP.edit().putInt(user_type,2).apply();
 
                 //textProfil1.setVisibility(view.INVISIBLE);
                 //textProfil1.setVisibility(View.INVISIBLE);

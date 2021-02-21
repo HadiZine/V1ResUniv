@@ -143,7 +143,7 @@ public class ActivityMenu extends AppCompatActivity {
             int i=item.getItemId();
 
             if(i==R.id.menu_repas){
-                Intent intent_to_menu=new Intent(Settings.ACTION_LOCALE_SETTINGS);
+                Intent intent_to_menu=new Intent(this,ActivityConsultationMenu.class);
                 startActivity(intent_to_menu);
                 Toast.makeText(getApplicationContext(), "Le menu de cette semain", Toast.LENGTH_SHORT).show();
 
@@ -151,30 +151,40 @@ public class ActivityMenu extends AppCompatActivity {
 
             else if (i==R.id.rec_test)
             {
-                Intent intent_to_rec=new Intent(Settings.ACTION_LOCALE_SETTINGS);
+                Intent intent_to_rec=new Intent(this,ActivityReclamationsEtudiant.class);
                 startActivity(intent_to_rec);
                 Toast.makeText(getApplicationContext(), "Reclamer-Vous", Toast.LENGTH_SHORT).show();
 
 
             }
             else if(i==R.id.Apropos) {
-                Intent intent_to_info = new Intent(Settings.ACTION_LOCALE_SETTINGS);
+                Intent intent_to_info = new Intent(this,ActivityApropos.class);
                 startActivity(intent_to_info);
                 Toast.makeText(getApplicationContext(), "Explorer notre application", Toast.LENGTH_SHORT).show();
 
             }
             else if (i==R.id.Les_reservations)
             {
-                Intent intent_to_reservations= new Intent(Settings.ACTION_LOCALE_SETTINGS);
+                Intent intent_to_reservations= new Intent(this,ActivityReservations.class);
                 startActivity(intent_to_reservations);
                 Toast.makeText(getApplicationContext(), "Activity reservations", Toast.LENGTH_SHORT).show();
 
 
             }
+            else if (i==R.id.QR)
+            {
+                Intent intent_to_reservations= new Intent(this,ActivityGenerationQR.class);
+                startActivity(intent_to_reservations);
+                Toast.makeText(getApplicationContext(), "Activity Generation QR", Toast.LENGTH_SHORT).show();
+
+
+            }
+
             else if (i==R.id.Log_out)
             {
                 Intent intent_to_login= new Intent(this,Activity_login_etudiant.class);
                 startActivity(intent_to_login);
+                finish();
                 Toast.makeText(getApplicationContext(), "Deconnecter", Toast.LENGTH_SHORT).show();
 
 

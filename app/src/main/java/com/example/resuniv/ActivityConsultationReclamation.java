@@ -14,6 +14,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -23,6 +24,15 @@ public class ActivityConsultationReclamation extends AppCompatActivity {
 
     public ListView reclamationListView;
     public static String[] rec = new String[] {"","","","","","",""};
+    public static ArrayList<String> arrayList = new ArrayList<>();
+
+
+    public static String date_Reclamation= "Le  : ";
+    public static String Email= "resto@gmail.com: ";
+    public static String Tel= "00000";
+    //public static  String Ordre_reservation = "ordre: ";
+    public static String Anomalie= "Rien";
+    public static String Description= "Decription";
 
     FirebaseFirestore db;
     @Override
@@ -68,21 +78,26 @@ public class ActivityConsultationReclamation extends AppCompatActivity {
                 if (task.isSuccessful()) {
 
                     for (QueryDocumentSnapshot documentSnapshot : task.getResult()) {
-                        long indice = documentSnapshot.getLong(ActivityReclamationsEtudiant.getOrdre_reclamation());
-                        int indic_int = ((int) indice);
-                        int j = indic_int+1;
-                        String str = "";
+                        //long indice = documentSnapshot.getLong(ActivityReclamationsEtudiant.getOrdre_reclamation());
+                        //int indic_int = ((int) indice);
+                       // int j = indic_int+1;
+                        //String str = "";
                         Map<Integer, Object> list = new HashMap<>();
                         // Fragment1.arrayListl.add(documentSnapshot.getId());
                         // Fragment1.arrayListl.add("bonjour");
-                        list.put(0, "Reclamation \n"+"____________________");
+
+                        arrayList.add(" Reclamation du : "+documentSnapshot.getString(ActivityReclamationsEtudiant.date)+"\n"+"_____________________________\n   - Email : "+documentSnapshot.getId()+"\n   - Tel :"+ documentSnapshot.getString(ActivityReclamationsEtudiant.Tel)+
+                                "\n   - Anomalie :"+ documentSnapshot.getString(ActivityReclamationsEtudiant.Anomalie)+"\n   - Description : "+documentSnapshot.getString(ActivityReclamationsEtudiant.description));
+                    /*   list.put(0, "Reclamation \n"+"____________________");
                         list.put(1, "_______________\n"+"Reclamation "+j+" :\n"+"_______________\n   - Email : "+documentSnapshot.getId() );
                         list.put(2, "   - Date : " +documentSnapshot.getString(ActivityReclamationsEtudiant.date));
                         list.put(3, "   - Tel : " + documentSnapshot.getString(ActivityReclamationsEtudiant.Tel));
                         list.put(4, "   - Anomalie : " + documentSnapshot.getString(ActivityReclamationsEtudiant.Anomalie));
                         list.put(5, "   - Description : " );
                         list.put(6,"    "+documentSnapshot.getString(ActivityReclamationsEtudiant.description));
-                        Set<Map.Entry<Integer, Object>> setEntry = list.entrySet();
+
+                     */
+                      /*  Set<Map.Entry<Integer, Object>> setEntry = list.entrySet();
                         Iterator<Map.Entry<Integer, Object>> itEntry = setEntry.iterator();
                         while (itEntry.hasNext()) {
                             Map.Entry<Integer, Object> entry = itEntry.next();
@@ -101,7 +116,9 @@ public class ActivityConsultationReclamation extends AppCompatActivity {
 
                         // i++;
                         //rec[i]= documentSnapshot.getId();
-                        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(ActivityConsultationReclamation.this, android.R.layout.simple_list_item_1, rec);
+
+                       */
+                        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(ActivityConsultationReclamation.this, android.R.layout.simple_list_item_1, arrayList);
                         reclamationListView.setAdapter(adapter);
                     }
                 }

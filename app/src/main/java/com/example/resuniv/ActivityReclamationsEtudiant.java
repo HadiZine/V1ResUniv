@@ -22,7 +22,7 @@ public class ActivityReclamationsEtudiant extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private FirebaseFirestore db;
     public String ID_User;
-    public   static Spinner anomalie ;
+    public static Spinner anomalie;
 
     public static String Tel = "Numero du Tel";
     public static String date = "Date";
@@ -30,7 +30,7 @@ public class ActivityReclamationsEtudiant extends AppCompatActivity {
     public static String Anomalie = "anomalie";
 
 
-    private long i=0;
+    //private long i = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,9 +52,8 @@ public class ActivityReclamationsEtudiant extends AppCompatActivity {
         //
         //
 
-        Activity_login_etudiant.shP2 = getSharedPreferences("ID_File",MODE_PRIVATE);
-        ID_User = Activity_login_etudiant.shP2.getString(Activity_login_etudiant.Id_log,"");
-
+        Activity_login_etudiant.shP2 = getSharedPreferences("ID_File", MODE_PRIVATE);
+        ID_User = Activity_login_etudiant.shP2.getString(Activity_login_etudiant.Id_log, "");
 
 
         //
@@ -74,16 +73,14 @@ public class ActivityReclamationsEtudiant extends AppCompatActivity {
                 reclamation_Map.put(date, setDate);
                 reclamation_Map.put(description, setDescription);
                 reclamation_Map.put(Anomalie, setAnomalie);
-                reclamation_Map.put(Ordre_reclamation, i);
-                i=i+1;
+                //reclamation_Map.put(Ordre_reclamation, i);
+                //i=i+1;
 
 
                 if ((TextUtils.isEmpty(setTel)) || (TextUtils.isEmpty(setDate)) || (TextUtils.isEmpty(setDescription))) {
                     Toast.makeText(getApplicationContext(), "Complete all fields", Toast.LENGTH_LONG).show();
 
-                }
-                else
-                {
+                } else {
                     db.collection("Reclamations").document(ID_User).set(reclamation_Map);
                     Toast.makeText(getApplicationContext(), "Votre reclamation a été bien enregistrer. ", Toast.LENGTH_LONG).show();
 
@@ -94,7 +91,8 @@ public class ActivityReclamationsEtudiant extends AppCompatActivity {
         });
 
     }
-
+}
+/*
     public static String getOrdre_reclamation() {
         return Ordre_reclamation;
     }
@@ -105,3 +103,4 @@ public class ActivityReclamationsEtudiant extends AppCompatActivity {
 
     public static  String Ordre_reclamation = "ordre: ";
     }
+*/

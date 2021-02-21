@@ -83,7 +83,7 @@ public class activity_creer_compte extends AppCompatActivity {
 
 
         //****
-        if (email.isEmpty() || mdp.isEmpty() || idHeb.isEmpty() || Nom.isEmpty() || pr.isEmpty())
+        if ( Nom.isEmpty()|| pr.isEmpty() ||idHeb.isEmpty()  ||  mdp.isEmpty()|| email.isEmpty() )
         {
 
 
@@ -174,6 +174,7 @@ public class activity_creer_compte extends AppCompatActivity {
 
             Intent intent = new Intent(activity_creer_compte.this, Activity_login_etudiant.class);
             startActivity(intent);
+            finish();
 
         }
 

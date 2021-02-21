@@ -85,7 +85,7 @@ public class activity_creer_compte_staff extends AppCompatActivity {
         String Mcin = SCIN.getText().toString();
 
         //****************************************
-        if (email.isEmpty() || mdp.isEmpty() || Mcin.isEmpty() || Nom.isEmpty() || pr.isEmpty()) {
+        if (Nom.isEmpty() || pr.isEmpty() ||Mcin.isEmpty() ||  email.isEmpty()|| mdp.isEmpty( ) ){
 
             //Toast.makeText(getApplicationContext(),"Remplissez les champs",Toast.LENGTH_LONG).show();
             if (email.isEmpty()) {
@@ -163,6 +163,7 @@ public class activity_creer_compte_staff extends AppCompatActivity {
 
             Intent intent = new Intent(activity_creer_compte_staff.this, Activity_login_staff.class);
             startActivity(intent);
+            finish();
 
             //***
 

@@ -5,10 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Toast;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -16,9 +16,11 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class ActivityMethodePaiement extends AppCompatActivity {
+public class ActivityReservations extends AppCompatActivity {
+    public static ListView Lv_reservations;
+    //public static String[] List_reservations = new String[]{} ;
+    public static ArrayList<String> arrayList = new ArrayList<>();
 
     public FirebaseAuth mAuth;
     public FirebaseFirestore Root_fb;
@@ -28,11 +30,14 @@ public class ActivityMethodePaiement extends AppCompatActivity {
 
     public String ID_tst;
 
+    private int indice_list=0;
+    public static String day1, dej1, dinn1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_methode_paiement);
-
+        setContentView(R.layout.activity_reservations);
+        Lv_reservations=findViewById(R.id.ListView_Reservations);
         mAuth = FirebaseAuth.getInstance();
         Root_fb = FirebaseFirestore.getInstance();
 
@@ -40,48 +45,45 @@ public class ActivityMethodePaiement extends AppCompatActivity {
         Activity_login_etudiant.shP2 = getSharedPreferences("ID_File",MODE_PRIVATE);
         ID_tst = Activity_login_etudiant.shP2.getString(Activity_login_etudiant.Id_log,"master.stri2020@gmail.com");
         //*********
-
-        //***Mis-à-jour base donnee****
         Root_fb.collection("Etudiant").document(ID_tst).collection("Reservationn").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
 
+
                 if (task.isSuccessful()) {
-                    List<String> list = new ArrayList<>();
                     for (QueryDocumentSnapshot document : task.getResult()) {
 
                         Log.d(TAG, document.getId() + " => " + document.getData());
 
-                        String tstS = document.getId();
-                        list.add(tstS);
+                        day1 = document.getString(ActivityReservationPersonnalise.date_Reservation);
+
+                        dej1 = document.getString(ActivityReservationPersonnalise.Dej);
+
+                        dinn1=document.getString(ActivityReservationPersonnalise.Dinner);
+
+                          arrayList.add("Le : "+day1+"          "+dej1+"         "+dinn1);
+
+                       // List_reservations[indice_list]= "Le : "+day1+"          "+dej1+"         "+dinn1;
+                        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(ActivityReservations.this, android.R.layout.simple_list_item_1,ActivityReservations.arrayList);
+                        Lv_reservations.setAdapter(adapter);
+                       // indice_list++;
 
                     }
-
-                    for (String idDate : list) {
-                        Root_fb.collection("Etudiant").document(ID_tst).collection("Reservationn").document(idDate).update(ActivityReservationPersonnalise.Onclique,"Invalid").addOnSuccessListener(new OnSuccessListener<Void>() {
-                            @Override
-                            public void onSuccess(Void aVoid) {
-                                Log.d(TAG, "Username updated!");
-
-                            }
-                        });
-                    }
-
-
-
-
                 } else {
-
-
                     Log.d(TAG, "Error getting documents: ", task.getException());
                 }
+
+
             }
 
 
 
         });
 
-        //*****************
+
+
+
+
 
 
 
